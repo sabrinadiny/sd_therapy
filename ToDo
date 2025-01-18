@@ -1,0 +1,19 @@
+- add Events / Epochs to Preproc. Therefore we need:
+    [ ] ak.do_events() - 'STI101' the right channel?
+    [ ] create event_dict (Triggervalues)
+    [ ] length of each condition
+    [ ] adjust for sound-delay (air-tubes MEG)?
+    [ ] ak.do_epochs()
+
+- Preproc Cluster Script:
+    [ ] how many blocks?
+    [ ] maye do all blocks in one Job? (how to handle exceptions?)
+    [ ] add helper function to get all subjects
+    [ ] check storing conditions of preproc data
+
+- Sync Data from Sinuhe to SCC:
+    [ ] set up plus_sync (bomber and SCC-User are needed)
+
+- Analysis Scripts
+    [ ] what channels do we need (e.g. ECG, MEG, ...)?
+    [ ] what do we want to compute for these channels (e.g. RMS, ...)?
