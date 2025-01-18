@@ -1,0 +1,19 @@
+[project]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "Masterthesis"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+mne = ">=1.9.0,<2"
+ipython = ">=8.31.0,<9"
+pandas = ">=2.2.3,<3"
+scipy = ">=1.15.1,<2"
+seaborn = ">=0.13.2,<0.14"
+pymatreader = ">=1.0.0,<2"
+eelbrain = ">=0.39.11,<0.40"
+pyrasa = ">=1.0.0,<2"
+
