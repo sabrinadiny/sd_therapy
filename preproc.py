@@ -1,5 +1,5 @@
 # %% imports
-from helpers import BasicPreproc
+from cluster_jobs.c01_basic_preproc import BasicPreproc
 from pathlib import Path
 from plus_slurm import JobCluster
 
