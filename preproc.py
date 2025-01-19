@@ -2,12 +2,13 @@
 from cluster_jobs.c01_basic_preproc import BasicPreproc
 from pathlib import Path
 from plus_slurm import JobCluster
+from helpers.getSubjects import getSubjectsFrom
 
 
 # %% get subject IDs and Paths
 
 data_path = 'path/to/data'# path to fif files (plus_sync)
-all_subjects = dict()# add helper function to get all subjects from data dir
+all_subjects = getSubjectsFrom(data_path, subfolder=True, extension='.fif')
 
 
 #%% create and submit jobs
