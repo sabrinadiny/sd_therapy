@@ -1,84 +1,84 @@
-Trigger Values:
 
-% ===== TRIGGER VALUES OVERVIEW =====
 
-% General Triggers
-generalInstructionsTrigger = 12;  % Trigger for General Instructions
-finalInstructionsTrigger = 99;    % Trigger for Final Instructions
+Condition Numbers: Presented in Randomized Order
+Condition 1: Bodyscan ~ Mindfulness
+Condition 2: Safe Place ~ Relaxation
+Condition 3: Podcast ~ Control 
 
-% Resting State Triggers
-restingStateStartTrigger = 10;    % Trigger for Resting State Start
-restingStateEndTrigger = 11;      % Trigger for Resting State End
 
-% Condition Numbers:
-% Condition 1: Mindfulness
-% Condition 2: Relaxation
-% Condition 3: Podcast
+1. General Triggers
 
-% ===== TRIGGERS BY CONDITION =====
-% Base trigger for each condition
-baseTriggerCondition1 = 21;       % Base trigger for Condition 1 (Mindfulness)
-baseTriggerCondition2 = 22;       % Base trigger for Condition 2 (Relaxation)
-baseTriggerCondition3 = 23;       % Base trigger for Condition 3 (Podcast)
+10	Resting state start
+11	Resting state end
+12	General Instructions start   % Erklärung Ablauf Experiment 
+99	Final Instructions start     % Wird ganz am Ende nach allen Blocks präsentiert - Experiment endet
 
-% ===== CONDITION-SPECIFIC TRIGGERS =====
-% Pre-Condition Instructions
-preConditionTrigger1 = baseTriggerCondition1 + 10;  % Mindfulness
-preConditionTrigger2 = baseTriggerCondition2 + 10;  % Relaxation
-preConditionTrigger3 = baseTriggerCondition3 + 10;  % Podcast
 
-% Condition Audio Playback
-conditionTrigger1 = baseTriggerCondition1;          % Mindfulness
-conditionTrigger2 = baseTriggerCondition2;          % Relaxation
-conditionTrigger3 = baseTriggerCondition3;          % Podcast
 
-% End-Condition Intro Instructions
-endConditionIntroTrigger1 = baseTriggerCondition1 + 20;  % Mindfulness
-endConditionIntroTrigger2 = baseTriggerCondition2 + 20;  % Relaxation
-endConditionIntroTrigger3 = baseTriggerCondition3 + 20;  % Podcast
+2. Condition-Specific Triggers
 
-% End-Condition Questionnaire Audio
-endConditionQuestionsTrigger1 = baseTriggerCondition1 + 1000;  % Mindfulness
-endConditionQuestionsTrigger2 = baseTriggerCondition2 + 1000;  % Relaxation
-endConditionQuestionsTrigger3 = baseTriggerCondition3 + 1000;  % Podcast
+31	Pre-Condition Instructions for Condition 1 (Mindfulness)                    %Instructions: Nun folgt Audio, bitte Augen zumachen und aufmerksam zuhören...
+21	Condition 1 (Mindfulness) Audio Start                                       %Audio File startet 
+41	End-Condition Instructions for Condition 1 (Mindfulness)                    %Instructions: Nun folgen Fragen zur eben gehörten Audio....
+1021	End Condition Questionnaire for Condition 1 (Mindfulness)               %Instructions: Hier endet der mündliche Teil, bitte Fragebogen ausfüllen... 
+2021	Between-Conditions Instructions                                         %Instructions nach 1. Block: Hier endet die Übung, bald startet die nächste...
 
-% Between Conditions Instructions
-betweenConditionsTrigger1 = baseTriggerCondition1 + 2000;  % Mindfulness
-betweenConditionsTrigger2 = baseTriggerCondition2 + 2000;  % Relaxation
-betweenConditionsTrigger3 = baseTriggerCondition3 + 2000;  % Podcast
 
-% ===== QUESTION-SPECIFIC TRIGGERS =====
-% Question Audio Playback (Q1 to Q5)
-questionTrigger1_1 = baseTriggerCondition1 * 10 + 1;  % Mindfulness, Question 1
-questionTrigger1_2 = baseTriggerCondition1 * 10 + 2;  % Mindfulness, Question 2
-questionTrigger1_3 = baseTriggerCondition1 * 10 + 3;  % Mindfulness, Question 3
-questionTrigger1_4 = baseTriggerCondition1 * 10 + 4;  % Mindfulness, Question 4
-questionTrigger1_5 = baseTriggerCondition1 * 10 + 5;  % Mindfulness, Question 5
+32	Pre-Condition Instructions for Condition 2 (Relaxation)                     %Instructions: Nun folgt Audio, bitte Augen zumachen und aufmerksam zuhören
+22	Condition 2 (Relaxation) Audio Start                                        %Audio File startet 
+42	End-Condition Instructions for Condition 2 (Relaxation)                     %Instructions: Nun folgen Fragen zur eben gehörten Audio....
+1022	End Condition Questionnaire for Condition 2 (Relaxation)                %Instructions: Hier endet der mündliche Teil, bitte Fragebogen ausfüllen... 
+2022	Between-Conditions Instructions                                         %Instructions: nach 2. Block: Hier endet die Übung, bald startet die nächste...
 
-questionTrigger2_1 = baseTriggerCondition2 * 10 + 1;  % Relaxation, Question 1
-questionTrigger2_2 = baseTriggerCondition2 * 10 + 2;  % Relaxation, Question 2
-questionTrigger2_3 = baseTriggerCondition2 * 10 + 3;  % Relaxation, Question 3
-questionTrigger2_4 = baseTriggerCondition2 * 10 + 4;  % Relaxation, Question 4
-questionTrigger2_5 = baseTriggerCondition2 * 10 + 5;  % Relaxation, Question 5
+33	Pre-Condition Instructions for Condition 3 (Podcast)                        %Instructions: Nun folgt Audio, bitte Augen zumachen und aufmerksam zuhören...
+23	Condition 3 (Podcast) Audio Start                                           %Audio File startet
+43	End-Condition Instructions for Condition 3 (Podcast)                        %Instructions: Nun folgen Fragen zur eben gehörten Audio....
+1023	End Condition Questionnaire for                                         %Instructions: Hier endet der mündliche Teil, bitte Fragebogen ausfüllen...
 
-questionTrigger3_1 = baseTriggerCondition3 * 10 + 1;  % Podcast, Question 1
-questionTrigger3_2 = baseTriggerCondition3 * 10 + 2;  % Podcast, Question 2
-questionTrigger3_3 = baseTriggerCondition3 * 10 + 3;  % Podcast, Question 3
-questionTrigger3_4 = baseTriggerCondition3 * 10 + 4;  % Podcast, Question 4
-questionTrigger3_5 = baseTriggerCondition3 * 10 + 5;  % Podcast, Question 5
 
-% Next Question Instructions (Q1 to Q4)
-nextQuestionTrigger1_1 = baseTriggerCondition1 + 200 + 1;  % Mindfulness, After Question 1
-nextQuestionTrigger1_2 = baseTriggerCondition1 + 200 + 2;  % Mindfulness, After Question 2
-nextQuestionTrigger1_3 = baseTriggerCondition1 + 200 + 3;  % Mindfulness, After Question 3
-nextQuestionTrigger1_4 = baseTriggerCondition1 + 200 + 4;  % Mindfulness, After Question 4
 
-nextQuestionTrigger2_1 = baseTriggerCondition2 + 200 + 1;  % Relaxation, After Question 1
-nextQuestionTrigger2_2 = baseTriggerCondition2 + 200 + 2;  % Relaxation, After Question 2
-nextQuestionTrigger2_3 = baseTriggerCondition2 + 200 + 3;  % Relaxation, After Question 3
-nextQuestionTrigger2_4 = baseTriggerCondition2 + 200 + 4;  % Relaxation, After Question 4
+3. Question-Specific Triggers    
 
-nextQuestionTrigger3_1 = baseTriggerCondition3 + 200 + 1;  % Podcast, After Question 1
-nextQuestionTrigger3_2 = baseTriggerCondition3 + 200 + 2;  % Podcast, After Question 2
-nextQuestionTrigger3_3 = baseTriggerCondition3 + 200 + 3;  % Podcast, After Question 3
-nextQuestionTrigger3_4 = baseTriggerCondition3 + 200 + 4;  % Podcast, After Question 4
+% bisschen unlucky gelaufen beim Coden aber kein problem, da die Recordings eh immer pro Block sind
+% die Zahlen sind immer spezifisch für die jeweilige Bedingung und nicht pauschal über alle Bedingungen
+% sprich 123 bei Condition 2 ist nicht dasselbe 123 wie bei condition one.
+% Aufpassen hier: Im MEG benennung der Daten: VP COde _ condition _ Audiofile. ACHTUNG Condition Nummver im name entspricht
+% nicht den conditions below. Im MEG File Namen bezeichnet das die REIHENFOLGE. Sprich es kommt auf 
+% die Audiofile drauf an!
+% Sprich alles unten bezieht sich auf
+Condition 1: Bodyscan ~ Mindfulness
+Condition 2: Safe Place ~ Relaxation
+Condition 3: Podcast ~ Control
+% condition1 2 oder 3 im MEG file bezieht sich auf die REIHENFOLGE!!
+
+122	Condition 1, Question 1 played                                              %Audio Question File starting
+222	Next question instruction after Condition 1, Question 1                     %Instructions: Danke für die Antwort, weiter gehts mit der nächsten Frage
+123	Condition 1, Question 2 played
+223	Next question instruction after Condition 1, Question 2
+124	Condition 1, Question 3 played
+224	Next question instruction after Condition 1, Question 3
+125	Condition 1, Question 4 played
+225	Next question instruction after Condition 1, Question 4
+126	Condition 1, Question 5 played
+
+
+123	Condition 2, Question 1 played
+223	Next question instruction after Condition 2, Question 1
+124	Condition 2, Question 2 played
+224	Next question instruction after Condition 2, Question 2
+125	Condition 2, Question 3 played
+225	Next question instruction after Condition 2, Question 3
+126	Condition 2, Question 4 played
+226	Next question instruction after Condition 2, Question 4
+127	Condition 2, Question 5 played
+
+
+124	Condition 3, Question 1 played
+224	Next question instruction after Condition 3, Question 1
+125	Condition 3, Question 2 played
+225	Next question instruction after Condition 3, Question 2
+126	Condition 3, Question 3 played
+226	Next question instruction after Condition 3, Question 3
+127	Condition 3, Question 4 played
+227	Next question instruction after Condition 3, Question 4
+128	Condition 3, Question 5 played
