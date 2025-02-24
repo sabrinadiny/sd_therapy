@@ -10,12 +10,12 @@ from cluster_jobs.c01_basic_preproc import BasicPreproc
 #%% get subject IDs and Paths
 
 
-data_path = '/home/aweigl/sd_therapy'
-output_path = '/home/aweigl/sd_therapy_preproc'
+data_path = '/home/sdiny/sd_therapy'
+output_path = '/home/sdiny/sd_therapy_preproc'
 
 if not Path(output_path).exists():
     Path(output_path).mkdir()
-all_files = list(Path('/home/aweigl/sd_therapy').glob('*/*.fif'))
+all_files = list(Path('/home/sdiny/sd_therapy').glob('*/*.fif'))
 all_subjects = [str(file).split('/')[-1][:12] for file in all_files]
 all_subjects = list(set(all_subjects))
 all_subjects.sort()
@@ -33,7 +33,7 @@ job_cluster = JobCluster(
             required_ram= '16G',
             request_cpus= 4,
             request_time= 60*24,
-            python_bin='/home/aweigl/msc/sd_therapy/.pixi/envs/default/bin/python')
+            python_bin='/home/sdiny/masterthesis/sd_therapy/.pixi/envs/default/bin/python')
 
 
 job_cluster.add_job(BasicPreproc,
