@@ -92,7 +92,7 @@ class BasicPreproc(Job):
                         train_freq = 16,
                         )
                         
-            # ECG R-Peak Correction: Ensure correct indentation
+            # ECG R-Peak Correction
             if 'ECG003' in ak.raw.ch_names:  # Check if the ECG channel exists
                 ecg_epochs = mne.preprocessing.create_ecg_epochs(
                     ak.raw, 
