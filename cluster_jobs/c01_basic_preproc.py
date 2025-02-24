@@ -90,24 +90,7 @@ class BasicPreproc(Job):
                         ecg = True,            
                         train = True,
                         train_freq = 16,
-                        )
-                        
-            # ECG R-Peak Correction
-            if 'ECG003' in ak.raw.ch_names:  # Check if the ECG channel exists
-                ecg_epochs = mne.preprocessing.create_ecg_epochs(
-                    ak.raw, 
-                    ch_name='ECG003',  # Specify the ECG channel
-                    tmin=-0.3, tmax=0.3,  # 300ms before and after each R-peak
-                    baseline=(None, 0),  # Baseline correction from start of epoch
-                    preload=True
-                )
-
-                # Compute the average ECG artifact
-                ecg_evoked = ecg_epochs.average()
-
-                # Subtract the ECG artifact from the raw MEG data
-                ak.raw = ak.raw.copy().subtract_evoked(ecg_evoked)
-
+            
 
             if do_source:
                 ak.do_fwd_model(subject_id=subject_id,
